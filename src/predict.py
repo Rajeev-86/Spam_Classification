@@ -1,6 +1,5 @@
 import cloudpickle
-from preprocessing import preprocess_column
-
+from preprocessing import preprocess_column # Custom module
 import os
 
 # loading the model
