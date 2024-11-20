@@ -21,7 +21,6 @@ MODEL_PATH = os.path.join(BASE_DIR, 'model', 'spam_classifier_cloud.pkl')
 # Load the model
 with open(MODEL_PATH, 'rb') as file:
     model = cloudpickle.load(file)
-)
 
 # Streamlit app
 st.title("Spam Message Classifier")
