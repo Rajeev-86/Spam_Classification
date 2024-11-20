@@ -2,8 +2,10 @@ import streamlit as st
 import cloudpickle
 from src.preprocessing import preprocess_column #custom module
 import os
+import sys
 
 # loading the model
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 file_path = os.path.join(current_dir, 'spam_classifier_cloud.pkl')
