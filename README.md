@@ -17,7 +17,7 @@ Pandas: For data manipulation and preparation.
 Python: The core programming language.  
 Regular Expressions (Regex): For text preprocessing.  
 
-Live Demo
+**Live Demo**  
 You can access the live version of the app here: [Spam Classifier app](https://spamclassifierbyrajeev.streamlit.app/)
 
 **Setup and Installation**  
