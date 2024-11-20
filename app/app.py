@@ -1,6 +1,6 @@
 import streamlit as st
 import cloudpickle
-from preprocessing import preprocess_column #custom module
+from src.preprocessing import preprocess_column #custom module
 import os
 
 # loading the model
