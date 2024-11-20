@@ -12,10 +12,7 @@ sys.path.append(BASE_DIR)
 # Now you can import your module
 from src.preprocessing import preprocess_column
 
-import os
-
 # Construct the absolute path to the model file
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 MODEL_PATH = os.path.join(BASE_DIR, 'model', 'spam_classifier_cloud.pkl')
 
 # Load the model
