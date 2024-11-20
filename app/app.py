@@ -3,19 +3,13 @@ import cloudpickle
 import os
 import sys
 
-# Get the absolute path of the directory two levels up
+# To import the preprocessor module from src
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-
-# Add the base directory to the Python path
 sys.path.append(BASE_DIR)
-
-# Now you can import your module
 from src.preprocessing import preprocess_column
 
-# Construct the absolute path to the model file
-MODEL_PATH = os.path.join(BASE_DIR, 'model', 'spam_classifier_cloud.pkl')
-
 # Load the model
+MODEL_PATH = os.path.join(BASE_DIR, 'model', 'spam_classifier_cloud.pkl')
 with open(MODEL_PATH, 'rb') as file:
     model = cloudpickle.load(file)
 
