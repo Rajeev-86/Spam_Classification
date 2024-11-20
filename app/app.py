@@ -4,7 +4,7 @@ import os
 import sys
 
 # Get the absolute path of the directory two levels up
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 # Add the base directory to the Python path
 sys.path.append(BASE_DIR)
