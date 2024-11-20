@@ -2,9 +2,17 @@ import streamlit as st
 import cloudpickle
 import os
 import sys
-from src.preprocessing import preprocess_column #custom module
+
+# Get the absolute path of the directory two levels up
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+
+# Add the base directory to the Python path
+sys.path.append(BASE_DIR)
+
+# Now you can import your module
+from src.preprocessing import preprocess_column
+
 # loading the model
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
 file_path = os.path.join(current_dir, 'spam_classifier_cloud.pkl')
