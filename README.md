@@ -1,4 +1,4 @@
-<p style="text-align: center;">**Title: Spam Classification Web App**</p>
+<p style="text-align: center;">Title: Spam Classification Web App</p>
 
 
 **Description:** A simple web application built using Streamlit that classifies text messages as Spam or Not Spam using an SVM classifier with TF-IDF vectorization.
