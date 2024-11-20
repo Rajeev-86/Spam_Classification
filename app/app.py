@@ -12,13 +12,16 @@ sys.path.append(BASE_DIR)
 # Now you can import your module
 from src.preprocessing import preprocess_column
 
-# loading the model
-current_dir = os.path.dirname(os.path.realpath(__file__))
+import os
 
-file_path = os.path.join(current_dir, 'spam_classifier_cloud.pkl')
+# Construct the absolute path to the model file
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+MODEL_PATH = os.path.join(BASE_DIR, 'model', 'spam_classifier_cloud.pkl')
 
-with open(file_path, 'rb') as file:
+# Load the model
+with open(MODEL_PATH, 'rb') as file:
     model = cloudpickle.load(file)
+)
 
 # Streamlit app
 st.title("Spam Message Classifier")
