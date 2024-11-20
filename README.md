@@ -24,7 +24,7 @@ You can access the live version of the app here: [Spam Classifier app](https://s
 Follow these steps to set up the project locally:
 
 - Clone the Repository:
-git clone https://github.com/Rajeev-86/Spam-Classification.git
+git clone https://github.com/Rajeev-86/Spam-Classification.git 
 cd spam-classifier-web-app
 
 - Create a Virtual Environment (optional but recommended):
