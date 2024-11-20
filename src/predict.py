@@ -1,5 +1,5 @@
 import cloudpickle
-from src.preprocessing import preprocess_column
+from preprocessing import preprocess_column
 
 import os
 
