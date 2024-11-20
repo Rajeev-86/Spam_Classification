@@ -1,12 +1,3 @@
-The following libraries are required:
-- numpy
-- pandas
-- scikit learn
-- pickle
-- dill
-- cloudpickle
-
-The following modules are required
-- re
-- os
-- preprocessing (Custom module, available in src/)
+pandas
+scikit learn
+cloudpickle
