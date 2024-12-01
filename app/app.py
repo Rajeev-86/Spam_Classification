@@ -20,25 +20,14 @@ st.write("Enter a message below to check if it is spam or not.")
 user_input = st.text_area("Message", placeholder="Type your message here...")
 
 if st.button("Classify"):
-    if user_input.strip():
-        prediction = model.predict([user_input])
-        result = "Spam" if prediction[0] == 1 else "Not Spam"
-        if result == "Spam":
-            st.markdown(f"""
-                    <div style="background-color: #FFCDD2; padding: 20px; border-radius: 10px; text-align: center;">
-                        <h3 style="color: red;">🚫 The message is classified as: {result}</h3>
-                        <p style="font-size: 16px; color: #D32F2F;">This message is potentially harmful or unwanted. Please be cautious!</p>
-                    </div>
-                """, unsafe_allow_html=True)
+    if user_message.strip() != "":
+        prediction = model.predict([user_message])[0]
+
+        if prediction == 1:
+            result = "This message is Spam"
         else:
-            st.markdown(f"""
-                <div style="background-color: #C8E6C9; padding: 20px; border-radius: 10px; text-align: center;">
-                    <h3 style="color: green;">✅ The message is classified as: {result}</h3>
-                    <p style="font-size: 16px; color: #388E3C;">This message is safe and not considered spam.</p>
-                </div>
-            """, unsafe_allow_html=True)
+            result = "This message is Not Spam"
+
+        st.write(f"Prediction: **{result}**")
     else:
-        st.error("Please enter a valid message.")
-
-
-
+        st.write("Please enter a message.")
