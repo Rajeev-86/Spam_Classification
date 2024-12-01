@@ -20,7 +20,7 @@ st.write("Enter a message below to check if it is spam or not.")
 user_input = st.text_area("Message", placeholder="Type your message here...")
 
 if st.button("Classify"):
-    if user_message.strip() != "":
+    if user_input.strip() != "":
         prediction = model.predict([user_message])[0]
 
         if prediction == 1:
