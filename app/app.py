@@ -23,12 +23,13 @@ if st.button("Classify"):
     if user_input.strip():
         prediction = model.predict([user_input])
         result = "Spam" if prediction[0] == 1 else "Not Spam"
-        st.markdown(f"""
-                <div style="background-color: #FFCDD2; padding: 20px; border-radius: 10px; text-align: center;">
-                    <h3 style="color: red;">🚫 The message is classified as: {result}</h3>
-                    <p style="font-size: 16px; color: #D32F2F;">This message is potentially harmful or unwanted. Please be cautious!</p>
-                </div>
-            """, unsafe_allow_html=True)
+        if result == "Spam":
+            st.markdown(f"""
+                    <div style="background-color: #FFCDD2; padding: 20px; border-radius: 10px; text-align: center;">
+                        <h3 style="color: red;">🚫 The message is classified as: {result}</h3>
+                        <p style="font-size: 16px; color: #D32F2F;">This message is potentially harmful or unwanted. Please be cautious!</p>
+                    </div>
+                """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
                 <div style="background-color: #C8E6C9; padding: 20px; border-radius: 10px; text-align: center;">
