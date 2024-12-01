@@ -25,18 +25,9 @@ if st.button("Classify"):
         result = "Spam" if prediction[0] == 1 else "Not Spam"
         
         if result == "Spam":
-            st.markdown(f"""
-                <div style="background-color: rgba(255, 205, 210, 0.8); padding: 40px; border-radius: 10px; text-align: center; width: 80%; margin: auto;">
-                    <h4 style="color: red;">🚫 The message is classified as: {result}</h4>
-                    <p style="font-size: 14px; color: #D32F2F;">This message is potentially harmful or unwanted. Please be cautious!</p>
-                </div>
-            """, unsafe_allow_html=True)
+            st.error(f"The message is classified as: {result}")  # Red box for spam
         else:
-            st.markdown(f"""
-                <div style="background-color: rgba(200, 230, 201, 0.8); padding: 40px; border-radius: 10px; text-align: center; width: 80%; margin: auto;">
-                    <h4 style="color: green;">✅ The message is classified as: {result}</h4>
-                    <p style="font-size: 14px; color: #388E3C;">This message is safe and not considered spam.</p>
-                </div>
-            """, unsafe_allow_html=True)
+            st.success(f"The message is classified as: {result}")  # Green box for not spam
     else:
+        st.error("Please enter a valid message.")
         st.write("Please enter a message.")
