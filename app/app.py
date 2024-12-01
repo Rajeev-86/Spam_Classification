@@ -30,4 +30,3 @@ if st.button("Classify"):
             st.success(f"The message is classified as: {result}")  # Green box for not spam
     else:
         st.error("Please enter a valid message.")
-        st.write("Please enter a message.")
