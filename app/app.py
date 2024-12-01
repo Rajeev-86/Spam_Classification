@@ -39,6 +39,4 @@ if st.button("Classify"):
                 </div>
             """, unsafe_allow_html=True)
     else:
-        st.error("Please enter a valid message.")ediction: **{result}**")
-    else:
         st.write("Please enter a message.")
