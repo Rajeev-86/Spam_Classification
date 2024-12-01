@@ -23,7 +23,10 @@ if st.button("Classify"):
     if user_input.strip():
         prediction = model.predict([user_input])
         result = "Spam" if prediction[0] == 1 else "Not Spam"
-        st.success(f"The message is classified as: **{result}**")
+        if result == "Spam":
+            st.markdown(f"<h3 style='color: red;'>The message is classified as: {result}</h3>", unsafe_allow_html=True)
+        else:
+            st.markdown(f"<h3 style='color: green;'>The message is classified as: {result}</h3>", unsafe_allow_html=True)
     else:
         st.error("Please enter a valid message.")
 
